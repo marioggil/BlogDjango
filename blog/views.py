@@ -22,7 +22,7 @@ def post_new(request):
             post.author = request.user
             #post.published_date = timezone.now()
             post.save()
-            return redirect('blog.views.post_detail', pk=post.pk)
+            return redirect("/drafts/")
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -43,3 +43,12 @@ def post_edit(request, pk):
 def post_draft_list(request):
     posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')
     return render(request, 'blog/post_draft_list.html', {'posts': posts})
+
+def post_publish(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.publish()
+    return redirect('post_detail', pk=pk)
+
+def publish(self):
+    self.published_date = timezone.now()
+    self.save()

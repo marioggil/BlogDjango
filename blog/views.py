@@ -4,8 +4,13 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404,redirect
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 
 
+def get_context_data(self, **kwargs):
+    context = super(AboutPageView, self).get_context_data(**kwargs)
+    context['my_mathy_paragraph'] = my_mathy_paragraph
+    return context
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -14,6 +19,12 @@ def post_detail(request, pk):
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
+
+class AboutPageView(TemplateView):
+    template_name = 'blog/about.html'
+    
+class HomePageView(TemplateView):
+    template_name = 'blog/home.html'
 
 @login_required
 def post_new(request):

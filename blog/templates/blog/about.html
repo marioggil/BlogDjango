@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+{% load pygmentify_tags %}
+
+{% load latexify %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My math blog</title>
+    <link rel="stylesheet" href="{% pygmentify_css %}">
+    {% include 'latexify/stylesheets.html' %}
+</head>
+
+
+<body>
+    <h2>Welcome to my mathy blog</h2>
+
+La ecuacion siguente:{% latexify context_arg parse_math=True %}
+ a continuacion {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_inline=True %}
+ a continuacion {% latexify 'c = \pm\sqrt{a^2 + b^2}' math_block=True %}
+  
+
+
+
+    
+    
+    {% pygmentify %}
+    <pre class="python">
+    def fgr(gfr):
+        fhgt.rgs()
+        print('Hello, world!')
+    print('Hello, world!')
+    </pre>
+    {% endpygmentify %}
+
+    
+{% include "latexify/scripts.html" %}
+</body>
+</html>
+
+

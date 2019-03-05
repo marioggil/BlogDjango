@@ -10,4 +10,6 @@ urlpatterns = [
     path('drafts/', views.post_draft_list, name='post_draft_list'),
     path('post/<pk>/publish/', views.post_publish, name='post_publish'),
     path('post/<pk>/remove/', views.post_remove, name='post_remove'),
+    path('about/', views.AboutPageView.as_view(), name='about'),
+    path('home/', views.HomePageView.as_view(), name='home'),
 ]

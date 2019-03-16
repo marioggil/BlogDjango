@@ -1,12 +1,31 @@
 {% extends 'blog/base.html' %}
+{% load random_numbers %}
+{% load reste %}
+
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                <p>published: {{ post.published_date }}</p>
-            </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
+
+
+
+<div class="card-deck mx-auto">
+{% random_int 5 as flag %}
+  {% for post in posts %}    
+<div class="card text-white bg-dark mb-3" >
+    <div class="card-header"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
+    <div class="card-body">
+        <h5 class="card-title">{{ post.display_my_safefield|linebreaksbr }}</h5>
+        <p class="text-muted">published: {{ post.published_date}} </p>
+    </div>
+</div>
+{%  reste flag as flag %}
+{% if flag < 1 %}
+</div>
+<div class="card-deck mx-auto">
+{% random_int 5 as flag %}
+{% endif %}
+ {% endfor %}
+ </div>
+ 
+
+
 {% endblock %}
+

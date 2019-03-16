@@ -1,0 +1,88 @@
+{% load static %}
+
+{% load random_numbers %}
+{% load reste %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre mi</a>
+                </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="text-center bg-secondary shadow-lg ">
+    <h1>Marioggil</h1>
+        <h1>Marioggil</h1>
+        <p>Biologo</p>
+
+    <div class="d-flex flex-row bd-highlight mb-3 justify-content-center">    
+    <a class="text-hide" style="background-image: url('{% static 'images/Tw.png' %}'); width: 50px; height: 50px;" href="1">Twitter</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/Fa.png' %}');width: 50px; height: 50px;" href="1">Facebook</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/In.png' %}');width: 50px; height: 50px;" href="1">Instagram</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/Li.png' %}');width: 50px; height: 50px;" href="1">likendl</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/Fa.png' %}');width: 50px; height: 50px;" href="1">Orcid</a>
+    </div>
+
+
+
+        </div>
+
+    <div class="container rounded-top rounded-lg bg-secondary shadow-lg card-block">
+        <h2>Sobre Mi</h2>
+                    <div class="row">
+              <div class="col-md-4">
+                <p><img src="./assets/images/img-01.jpg" class="img-responsive" alt=""></p>
+              </div>
+              <div class="col-md-8">
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              {% random_int 5 as flag %}
+                <p>A random value, 1 ≤ {{ flag }} ≤ 10.</p>
+                {%  reste flag as flag %}
+                <p>A random value, 1 ≤ {{ flag }} ≤ 10.</p>
+ 
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="container rounded-top rounded-lg bg-secondary shadow-lg ">
+     <h2>Sobre Mi</h2>
+
+    </div>
+    <div class="container rounded-top rounded-lg bg-secondary shadow-lg ">
+    <p>Imagenes Mapas</p>
+
+    </div>
+
+
+
+
+
+
+</body>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</html>

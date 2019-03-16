@@ -25,7 +25,7 @@ SECRET_KEY = '%z%of&@=(fg6946k3*^h%#xvaobyo6*7vw^cwt)vs)7*q+zsuq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', ".pythonanywhere.com"]
+ALLOWED_HOSTS = ['127.0.0.1', ".pythonanywhere.com", "marioggil.pythonanywhere.com"]
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pygmentify',
+    'latexify',
     'blog',
 ]
 
@@ -120,3 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+LOGIN_REDIRECT_URL = '/'

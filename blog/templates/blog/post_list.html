@@ -9,7 +9,7 @@
 <div class="card-deck mx-auto">
 {% random_int 5 as flag %}
   {% for post in posts %}    
-<div class="card text-white bg-dark mb-3" >
+<div class="card text-white bg-dark mb-3">
     <div class="card-header"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
     <div class="card-body">
         <h5 class="card-title">{{ post.display_my_safefield|linebreaksbr }}</h5>

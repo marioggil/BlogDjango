@@ -25,7 +25,7 @@ SECRET_KEY = '%z%of&@=(fg6946k3*^h%#xvaobyo6*7vw^cwt)vs)7*q+zsuq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', ".pythonanywhere.com", "marioggil.pythonanywhere.com"]
+ALLOWED_HOSTS = ['127.0.0.1', ".pythonanywhere.com"]
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pygmentify',
-    'latexify',
     'blog',
 ]
 

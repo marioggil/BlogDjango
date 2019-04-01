@@ -1,4 +1,79 @@
 
 body {
-    background-image: url(/static/images/TeselaWeb2.png),linear-gradient(180deg,#ff0060 0,#ff6975);
+    background-image: url(/static/images/TeselaWeb2.png),linear-gradient(180deg,#cdffb2,#ffb2cd);
 }
+.color1{
+    background-color: #85e555;
+}
+.color2{    background-color: #5585e5;
+
+}
+.color3{background-color: #e55585;}
+
+.color1O{color: #1e3313}
+.color2O{color: #131e33}
+.color3O{color: #33131e }
+
+.color1V{color: #1e3313}
+.color2V{color: #0059ff}
+.color3V{color: #ff0059 }
+
+.color1P{color: #cdffb2}
+.color2P{color: #b2cdff}
+.color3P{color: #ffb2cd}
+
+
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-header{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar-custom{
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-ocult{
+overflow:hidden
+}
+
+.image-custom{
+max-width: 100%; height: auto}
+
+#LogoMarioGGil {
+width: 70vw;
+height: 70vh;
+position: relative;
+overflow: visible;
+}
+
+Normales
+#85e555
+#5585e5
+#e55585
+
+
+
+Oscuros
+#1e3313
+#131e33
+#33131e
+
+
+
+
+Vivos
+#59ff00
+#0059ff
+#ff0059
+
+
+
+Pastel
+#cdffb2
+#b2cdff
+#ffb2cd

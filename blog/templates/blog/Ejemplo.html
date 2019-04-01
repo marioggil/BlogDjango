@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+{% load pygmentify_tags %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My math blog</title>
+    <link rel="stylesheet" href="{% pygmentify_css %}">
+        <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+</head>
+
+
+<body>
+    <h2>Welcome to my mathy blog</h2>
+
+
+
+
+
+    
+    
+    {% pygmentify %}
+    <pre class="python">
+    def fgr(gfr):
+        fhgt.rgs()
+        print('Hello, world!')
+    print('Hello, world!')
+    </pre>
+    {% endpygmentify %}
+
+    
+</body>
+</html>
+
+

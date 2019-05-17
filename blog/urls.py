@@ -11,4 +11,5 @@ urlpatterns = [
     path('post/<pk>/remove/', views.post_remove, name='post_remove'),
     path('about/', views.AboutPageView.as_view(), name='about'),
     path('', views.HomePageView, name='home'),
+    path('mapa1/', views.MapaPageView, name='map'),
 ]

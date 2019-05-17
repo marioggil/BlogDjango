@@ -1,11 +1,10 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/baseblog.html' %}
 {% load random_numbers %}
 {% load reste %}
 
 {% block content %}
 
 
-<h1>Marioggil</h1>
 <div class="card-deck mx-auto">
 {% random_int 5 as flag %}
   {% for post in posts %}    
@@ -25,7 +24,7 @@
 {% random_int 5 as flag %}
 {% endif %}
  {% endfor %}
- </div>
+</div>
  
 
 

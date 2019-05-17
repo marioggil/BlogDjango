@@ -26,6 +26,8 @@ class AboutPageView(TemplateView):
 def HomePageView(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')[:3]
     return render(request, 'blog/home.html', {'posts': posts})    
+def MapaPageView(request):
+    return render(request, 'blog/index3.html')   
 
 
 @login_required

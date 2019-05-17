@@ -1,2 +1,3 @@
-Django~=2.0.6
+Django~=2.2
 django-pygmentify
+django-taggit

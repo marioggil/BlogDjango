@@ -8,5 +8,9 @@
     
     <div class="folium-map" id="map_210b58ae878f4ff893fa069caaf4637f" ></div>
      <script type="text/javascript" src="/static/maps/map1.js"></script>
+                   {% random_int 5 as flag %}
+                <p>A random value, 1 ≤ {{ flag }} ≤ 10.</p>
+                {%  reste flag as flag %}
+                <p>A random value, 1 ≤ {{ flag }} ≤ 10.</p>
 
 {% endblock %} 

@@ -3,7 +3,7 @@
 
 {% load random_numbers %}
 {% load reste %}
-
+{% load TextoReducido %}
 {% block content %}
 
     <div class="text-center color2 shadow-lg ">
@@ -27,11 +27,11 @@
 </svg>
 
     <div class="d-flex flex-row bd-highlight mb-3 justify-content-center">    
-    <a class="text-hide" style="background-image: url('{% static 'images/Tw.png' %}'); max-width: 50px; height: auto" href="1">Twitter</a>
-    <a class="text-hide" style="background-image: url('{% static 'images/Fa.png' %}');width: 50px; height: 50px;" href="1">Facebook</a>
-    <a class="text-hide" style="background-image: url('{% static 'images/In.png' %}');width: 50px; height: 50px;" href="1">Instagram</a>
-    <a class="text-hide" style="background-image: url('{% static 'images/Li.png' %}');width: 50px; height: 50px;" href="1">likendl</a>
-    <a class="text-hide" style="background-image: url('{% static 'images/Fa.png' %}');width: 50px; height: 50px;" href="1">Orcid</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/Tw.png' %}'); max-width: 50px; height: auto" href="https://twitter.com/marioggil">Twitter</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/Fa.png' %}');width: 50px; height: 50px;" href="https://www.facebook.com/marioggil2?ref=bookmarks">Facebook</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/In.png' %}');width: 50px; height: 50px;" href="https://www.instagram.com/marioggil01/">Instagram</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/Li.png' %}');width: 50px; height: 50px;" href="https://www.linkedin.com/in/marioggil">likendin</a>
+    <a class="text-hide" style="background-image: url('{% static 'images/ORCID-iD.png' %}');width: 50px; height: 50px;" href="https://orcid.org/0000-0003-0509-9305">Orcid</a>
     </div>
 
 
@@ -46,7 +46,8 @@
 <div class="card text-white color2 mb-3">
     <div class="card-header"><a class="color1P" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
     <div class="card-body card-ocult" >
-        <h5 class="card-title">{{ post.display_my_safefield|linebreaksbr }}</h5>
+         {% TextoReducido post.display_my_safefield as summary %}
+        <h5 class="card-title">{{ summary }}</h5>
     </div>
     <div class="card-footer">
         <p class="color3P">published: {{ post.published_date}} </p>

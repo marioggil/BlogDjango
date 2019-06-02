@@ -1,7 +1,7 @@
 {% extends 'blog/baseblog.html' %}
 {% load random_numbers %}
 {% load reste %}
-
+{% load TextoReducido %}
 {% block content %}
 
 
@@ -11,7 +11,9 @@
 <div class="card text-white color2 mb-3">
     <div class="card-header"><a class="color1P" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
     <div class="card-body card-ocult" >
-        <h5 class="card-title">{{ post.display_my_safefield|linebreaksbr }}</h5>
+                {% TextoReducido post.display_my_safefield as summary %}
+                
+        <h5 class="card-title">{{ summary }}</h5>
     </div>
     <div class="card-footer">
         <p class="color3P">published: {{ post.published_date}} </p>

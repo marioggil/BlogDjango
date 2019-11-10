@@ -1,0 +1,83 @@
+{% load static %}
+{% load pygmentify_tags %}
+<html>
+    <head>
+    
+        <title>MarioGGil blog</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        
+        <link rel="stylesheet" href="{% pygmentify_css %}">
+        <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+        </script>
+                <script src="{% static 'js/lazy-line-painter-1.9.6.min.js' %}"></script>
+
+        <script type="text/javascript">
+
+          (function(){ 
+
+            document.onreadystatechange = () => {
+
+              if (document.readyState === 'complete') {
+                        
+                /**
+                 * Setup your Lazy Line element.
+                 * see README file for more settings
+                 */
+
+                let el = document.querySelector('#LogoMarioGGil');
+                let myAnimation = new LazyLinePainter(el, {"ease":"easeLinear","strokeWidth":1.2,"strokeOpacity":0.6,"strokeColor":"#FF0059","strokeCap":"round","delay":1030}); 
+                myAnimation.paint(); 
+              }
+            }
+
+          })();
+
+        </script>
+        .spacer { margin:0; padding:0; height:500px; }
+    </head>
+   <body>
+    <div class="page-header">
+
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark color2">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link color1O" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item color1O">
+                    <a class="nav-link color1O" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color1O" href="/about">Sobre mi</a>
+                </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    </div>
+    
+    <div class="p-4"></div>
+    <div class="content container">
+            <div>
+                <div>
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</html>
+ 

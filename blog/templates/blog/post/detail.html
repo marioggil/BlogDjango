@@ -1,0 +1,16 @@
+{% extends my_template %}
+{% block content %}
+                <div class="post">
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                    <div class="card text-white color2 mb-3">
+                    <div class="card-header"><h1>{{ post.title }}</h1></div>
+                    <div class="card-body card-ocult" >
+                        {{ post.display_my_safefield }}
+                    </div>
+                </div>
+
+                
+                
+{% endblock %}

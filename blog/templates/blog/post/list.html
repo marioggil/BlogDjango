@@ -1,0 +1,33 @@
+{% extends 'blog/baseblog.html' %}
+{% load random_numbers %}
+{% load reste %}
+{% load TextoReducido %}
+{% block content %}
+
+
+<div class="card-deck mx-auto">
+{% random_int 5 as flag %}
+  {% for post in posts %}    
+<div class="card text-white color2 mb-3">
+    <div class="card-header"><a class="color1P" href="{{ post.get_absolute_url }}">{{ post.title }}</a></div>
+    <div class="card-body card-ocult" >
+                {% TextoReducido post.display_my_safefield as summary %}
+                
+        <h5 class="card-title">{{ summary }}</h5>
+    </div>
+    <div class="card-footer">
+        <p class="color3P">published: {{ post.publish}} </p>
+    </div>
+</div>
+{%  reste flag as flag %}
+{% if flag < 1 %}
+</div>
+<div class="card-deck mx-auto">
+{% random_int 5 as flag %}
+{% endif %}
+ {% endfor %}
+</div>
+ 
+
+
+{% endblock %}

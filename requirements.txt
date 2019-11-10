@@ -1,3 +1,9 @@
-Django~=2.2
-django-pygmentify
-django-taggit
+beautifulsoup4==4.7.1
+Django==2.2
+django-pygmentify==0.3.7
+django-taggit==1.1.0
+psycopg2==2.8.2
+Pygments==2.3.1
+pytz==2019.1
+soupsieve==1.9.1
+sqlparse==0.3.0
